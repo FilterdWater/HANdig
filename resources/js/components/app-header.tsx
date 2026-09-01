@@ -1,5 +1,5 @@
 import { Link, usePage } from '@inertiajs/react';
-import { Home, Menu, Bell } from 'lucide-react';
+import { Home, Menu, Bell, LayoutGrid, Map, GraduationCap, Phone, Beer } from 'lucide-react';
 import AppLogo from '@/components/app-logo';
 import AppLogoIcon from '@/components/app-logo-icon';
 import { Breadcrumbs } from '@/components/breadcrumbs';
@@ -32,7 +32,7 @@ import { UserMenuContent } from '@/components/user-menu-content';
 import { useCurrentUrl } from '@/hooks/use-current-url';
 import { useInitials } from '@/hooks/use-initials';
 import { cn, toUrl } from '@/lib/utils';
-import { dashboard } from '@/routes';
+import { dashboard, about_apps, about_study, floor_plan, help_lines, student_life } from '@/routes';
 import type { BreadcrumbItem, NavItem } from '@/types';
 
 type Props = {
@@ -44,6 +44,31 @@ const mainNavItems: NavItem[] = [
         title: 'Dashboard',
         href: dashboard(),
         icon: Home,
+    },
+    {
+        title: 'Over de apps',
+        href: about_apps(),
+        icon: LayoutGrid,
+    },
+    {
+        title: 'Over je studie',
+        href: about_study(),
+        icon: GraduationCap,
+    },
+    {
+        title: 'Plattegrond',
+        href: floor_plan(),
+        icon: Map,
+    },
+    {
+        title: 'Hulplijnen',
+        href: help_lines(),
+        icon: Phone,
+    },
+    {
+        title: 'Studentenleven',
+        href: student_life(),
+        icon: Beer,
     },
 ];
 
@@ -60,7 +85,7 @@ export function AppHeader({ breadcrumbs = [] }: Props) {
     return (
         <>
             <div className="border-sidebar-border/80 border-b">
-                <div className="mx-auto flex h-16 items-center px-4 md:max-w-7xl">
+                <div className="mx-auto flex h-16 items-center px-4">
                     <Sheet>
                         <SheetTrigger asChild>
                             <Button
