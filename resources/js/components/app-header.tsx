@@ -73,8 +73,7 @@ const mainNavItems: NavItem[] = [
 ];
 
 
-const activeItemStyles =
-    'text-neutral-900 dark:bg-neutral-800 dark:text-neutral-100';
+const activeItemStyles = 'text-neutral-900 dark:bg-neutral-800 dark:text-neutral-100';
 
 export function AppHeader({ breadcrumbs = [] }: Props) {
     const page = usePage();
@@ -110,16 +109,19 @@ export function AppHeader({ breadcrumbs = [] }: Props) {
                                 <div className="flex h-full flex-col justify-between text-sm">
                                     <div className="flex flex-col space-y-4">
                                         {mainNavItems.map((item) => (
-                                            <Link
-                                                key={item.title}
-                                                href={item.href}
-                                                className="flex items-center space-x-2 font-medium"
-                                            >
-                                                {item.icon && (
-                                                    <item.icon className="h-5 w-5" />
-                                                )}
-                                                <span>{item.title}</span>
-                                            </Link>
+                                            <SheetTrigger asChild>
+                                                <Link
+                                                    key={item.title}
+                                                    href={item.href}
+                                                    // onClick={() => }
+                                                    className="flex items-center space-x-2 font-medium"
+                                                >
+                                                    {item.icon && (
+                                                        <item.icon className="h-5 w-5" />
+                                                    )}
+                                                    <span>{item.title}</span>
+                                                </Link>
+                                            </SheetTrigger>
                                         ))}
                                     </div>
 
