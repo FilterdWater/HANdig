@@ -83,8 +83,8 @@ export function AppHeader({ breadcrumbs = [] }: Props) {
 
     return (
         <>
-            <div className="border-sidebar-border/80 border-b">
-                <div className="mx-auto flex h-16 items-center px-4">
+            <div>
+                <div className="mx-auto flex h-16 items-center">
                     <Sheet>
                         <SheetTrigger asChild>
                             <Button
