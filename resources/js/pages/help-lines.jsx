@@ -15,10 +15,11 @@ const HelpLines = () => {
           <CardTitle>Hulplijnen</CardTitle>
         </CardHeader>
         <CardContent>
-          <p>Voor begeleiding naast je studie of persoonlijke problemen kun je altijd contact opnemen met de studentbegeleiders en vertrouwenspersonen. Voor meer informatie rondom ondersteuning, veiligheid of bijzondere situaties ga naar: <a className='text-blue-500 underline' href="https://www1.han.nl/insite/studenten/panelnav.xml/hulp-ondersteuning-training" target='_blank'>Hulp, Ondersteuning en Training</a></p>
+          <p>Voor begeleiding naast je studie of persoonlijke problemen kun je altijd contact opnemen met de studentbegeleiders en vertrouwenspersonen. Voor meer informatie rondom ondersteuning, veiligheid of bijzondere situaties ga naar:</p>
+          <a className='text-blue-500 underline' href="https://www1.han.nl/insite/studenten/panelnav.xml/hulp-ondersteuning-training" target='_blank'>Hulp, Ondersteuning en Training</a>
         </CardContent>
       </Card>
-      <div className='grid grid-cols-2 '>
+      <div className='grid grid-cols-1 md:grid-cols-2 '>
         {/* Ondersteuner */}
         <div className='flex flex-col items-center justify-center'>
           <img className='size-64' src={image1} alt='ondersteuner' />
