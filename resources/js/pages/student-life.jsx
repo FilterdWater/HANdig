@@ -1,12 +1,5 @@
 import React from "react"
-
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card"
 
 import intonijmegen from "../../assets/student-life/Intonijmegen.png"
 import SSHn from "../../assets/student-life/SSHn.png"
