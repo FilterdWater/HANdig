@@ -138,7 +138,8 @@ const AboutApps = () => {
 
       <div className="w-full h-full flex gap-4">
         <Accordion
-          multiple
+          type="single"
+          collapsible
           className="w-full"
         >
           {filteredItems.map((item) => (
